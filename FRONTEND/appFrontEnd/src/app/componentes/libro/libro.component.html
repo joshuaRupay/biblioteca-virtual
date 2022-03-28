@@ -1,0 +1,114 @@
+<div class="w-full px-48 py-10">
+
+
+    <!-- TARJETA PRINCIPAL -->
+    <div class="min-w-min h-auto px-5 py-5 bg-white shadow-2xl rounded-3xl">
+  
+      <div class="flex py-5 justify-between">
+  
+        <!-- IMAGEN DEL LIBRO Y BOTONES  -->
+        <div class=" flex flex-col ml-28 mt-12">
+  
+          <img class="shadow-2xl" [src]="libro.urlImagenPortada" alt="No se encontro imagen" />
+  
+          <div class="flex justify-center gap-3 bg-yellow-200 w-24 rounded-full mx-auto my-2 py-1 shadow-lg">
+  
+            <button class="flex items-center gap-1 text-sm px-2 py-2 rounded-full hover:bg-gray-50 transition-colors focus:bg-gray-100 focus:outline-none focus-visible:border-gray-500">
+  
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="red"
+                   stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                </path>
+              </svg>
+  
+            </button>
+  
+            <button class="flex items-center gap-1 text-sm px-2 py-2 rounded-full hover:bg-gray-50 transition-colors focus:bg-gray-100 focus:outline-none focus-visible:border-gray-500">
+  
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="blue"
+                   stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+              </svg>
+  
+            </button>
+  
+          </div>
+  
+        </div>
+        <!-- FIN: IMAGEN DEL LIBRO Y BOTONES  -->
+  
+        <!-- DATOS DEL LIBRO  -->
+        <div class="w-full ml-28 mr-28 pt-6">
+  
+          <h1 class="text-3xl font-bold text-gray-800 mb-4 uppercase">{{libro.titulo}}</h1>
+  
+          <p class="leading-loose text-gray-800 text-1xl bg-green-200 rounded-full px-5 my-3 w-4/6 truncate shadow-lg">Autor: {{libro.nombreAutor}}</p>
+          <p class="leading-loose text-gray-800 text-1xl bg-green-200 rounded-full px-5 my-3 truncate shadow-lg">Fecha de publicación: {{libro.fechaPublicacion}}</p>
+          <p class="leading-loose text-gray-800 text-1xl bg-green-200 rounded-full px-5 my-3 w-3/6 truncate shadow-lg">Edición Nº: {{libro.numeroEdicion}}</p>
+  
+          <div class="flex w-full pt-9 justify-between">
+            <a href="{{linkPaginaActual}}" class="uppercase text-1xl py-4 px-8 rounded-full font-bold bg-red-200 hover:bg-gray-500 transition-colors focus:bg-gray-100 focus:outline-none focus-visible:border-gray-500">Leer Ahora</a>
+          </div>
+  
+        </div>
+        <!-- FIN: DATOS DEL LIBRO  -->
+  
+      </div>
+  
+    </div>
+  
+  
+    <!-- TARJETA DESCRIPCION -->
+    <div class="min-w-min h-auto mt-8 px-5 py-14 bg-white shadow-2xl rounded-3xl">
+  
+      <!-- DESCRIPCION  -->
+      <div class="w-full mx-20">
+  
+        <h1 class="text-3xl font-bold text-gray-800 uppercase">Descripción general</h1>
+  
+        <p class="mt-8 leading-loose text-gray-800 text-1xl bg-blue-200 rounded-2xl p-8 w-4/5 shadow-lg">
+          {{libro.descripcion}}
+        </p>
+  
+      </div>
+      <!-- FIN: DESCRIPCION  -->
+  
+    </div>
+    <!-- fIN: TARJETA DESCRIPCION -->
+  
+  
+    <!-- TARJETA INDICE -->
+    <div class="min-w-min h-auto mt-8 px-5 py-14 bg-white shadow-2xl rounded-3xl">
+  
+      <div class="w-full mx-20">
+  
+        <h1 class="text-3xl font-bold text-gray-800 uppercase">Índice general</h1>
+  
+        <div class="mt-8 bg-purple-200 rounded-2xl p-6 w-4/5 shadow-lg">
+          <img [src]="libro.urlImagenIndice" alt="No se encontro indice">
+        </div>
+  
+      </div>
+  
+    </div>
+    <!-- FIN: TARJETA INDICE -->
+  
+    <!-- TARJETA CONTENIDO -->
+    <div id="contenido" class=" min-w-min h-auto mt-8 px-5 py-14 bg-white shadow-2xl rounded-3xl">
+  
+      <div class="w-full mx-20">
+  
+        <h1 class="text-3xl font-bold text-gray-800 uppercase">Contenido</h1>
+  
+        <div class="mt-8 bg-sky-200 rounded-2xl p-6 w-4/5 shadow-lg">
+          <iframe class="h-screen w-full" [src]="urlPdf"></iframe>
+        </div>
+  
+      </div>
+  
+    </div>
+    <!-- FIN: TARJETA CONTENIDO -->
+  
+  
+  </div>

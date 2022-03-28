@@ -1,0 +1,184 @@
+<div class="flex flex-col w-full">
+
+    <app-carrusel-libros></app-carrusel-libros>
+  
+    <!-- MEJORES TITULOS -->
+    <div class="flex flex-col h-full mt-80">
+  
+      <div class="fondo flex-col m-4">
+  
+        <p class="letra1 text-5xl text-black-500 font-semibold m-10">MEJORES TÍTULOS</p>
+  
+        <!-- GRID DE LIBROS -->
+        <div class="grid grid-cols-4 gap-10 max-w-max px-10 pb-10">
+  
+          <!-- LIBRO -->
+          <div *ngFor="let libro of listaPrimerosLibros; let indice = index" class="flex flex-col bg-gray-200 rounded-lg p-4 m-2 w-max h-max">
+  
+            <div class="bg-gray-400 rounded-lg w-max h-max">
+              <img [src]="libro.urlImagenPortada" alt="No se encontró portada" class="w-52 h-30" />
+            </div>
+  
+            <div class="flex flex-col items-start mt-4">
+              <h4 class="text-xl font-semibold">{{libro.titulo}}</h4>
+              <p class="text-sm">{{libro.nombreAutor}}</p>
+              <a class="p-2 leading-none rounded font-medium mt-3 bg-gray-400 text-xs uppercase" [routerLink]="['/biblioteca/libro',libro.id]">Leer ahora</a>
+            </div>
+  
+          </div>
+          <!-- FIN: LIBRO -->
+  
+        </div>
+        <!-- FIN: GRID DE LIBROS -->
+  
+      </div>
+  
+    </div>
+    <!--  FIN: MEJORES TITULOS -->
+  
+    <!-- LIBROS DE LA SEMANA -->
+    <div class="fondo">
+  
+      <p class="text-5xl text-black-500 font-semibold my-10 mx-12">LIBROS DE LA SEMANA</p>
+  
+      <div class="grid grid-cols-3 grid-rows-2 gap-4 justify-items-center p-4">
+  
+        <!-- LIBRO 1 -->
+        <div class="flex flex-row w-96 bg-indigo-400 rounded-xl border-4 border-indigo-400">
+  
+          <div class="text-12xl">1</div>
+          
+          <div class="flex flex-col bg-gray-200 rounded-lg p-4 m-2 w-full">
+  
+            <div class="h-max bg-gray-400 rounded-lg">
+              <img [src]="libro1.urlImagenPortada" alt="No se encontró portada" class="w-52 h-30" />
+            </div>
+  
+            <div class="flex flex-col items-start mt-4">
+              <h4 class="w-44 truncate text-xl font-semibold">{{libro1.titulo}}</h4>
+              <p class="w-44 truncate text-sm">{{libro1.nombreAutor}}</p>
+              <a class="p-2 leading-none rounded font-medium mt-3 bg-gray-400 text-xs uppercase" [routerLink]="['/biblioteca/libro',libro1.id]">Leer ahora</a>
+            </div>
+  
+          </div>
+  
+        </div>
+        <!-- FIN: LIBRO 1 -->
+  
+        <!-- LIBRO 2 -->
+        <div class="flex flex-row w-96 bg-blue-400 rounded-xl border-4 border-blue-400">
+  
+          <div class="text-12xl">2</div>
+  
+          <div class="flex flex-col bg-gray-200 rounded-lg p-4 m-2 w-full">
+  
+            <div class="h-max bg-gray-400 rounded-lg">
+              <img [src]="libro2.urlImagenPortada" alt="No se encontró portada" class="w-52 h-30" />
+            </div>
+  
+            <div class="flex flex-col items-start mt-4">
+              <h4 class="w-44 truncate text-xl font-semibold">{{libro2.titulo}}</h4>
+              <p class="w-44 truncate text-sm">{{libro2.nombreAutor}}</p>
+              <a class="p-2 leading-none rounded font-medium mt-3 bg-gray-400 text-xs uppercase" [routerLink]="['/biblioteca/libro',libro2.id]">Leer ahora</a>
+            </div>
+  
+          </div>
+  
+        </div>
+        <!-- FIN: LIBRO 2 -->
+  
+        <!-- LIBRO 3 -->
+        <div class="flex flex-row w-96 bg-red-400 rounded-xl border-4 border-red-400">
+  
+          <div class="text-12xl">3</div>
+  
+          <div class="flex flex-col bg-gray-200 rounded-lg p-4 m-2 w-full">
+  
+            <div class="h-max bg-gray-400 rounded-lg">
+              <img [src]="libro3.urlImagenPortada" alt="No se encontró portada" class="w-52 h-30" />
+            </div>
+  
+            <div class="flex flex-col items-start mt-4">
+              <h4 class="w-44 truncate text-xl font-semibold">{{libro3.titulo}}</h4>
+              <p class="w-44 truncate text-sm">{{libro3.nombreAutor}}</p>
+              <a class="p-2 leading-none rounded font-medium mt-3 bg-gray-400 text-xs uppercase" [routerLink]="['/biblioteca/libro',libro3.id]">Leer ahora</a>
+            </div>
+  
+          </div>
+  
+        </div>
+        <!-- FIN: LIBRO 3-->
+  
+        <!-- LIBRO 4 -->
+        <div class="flex flex-row w-96 bg-yellow-400 rounded-xl border-4 border-yellow-400">
+  
+          <div class="text-12xl">4</div>
+  
+          <div class="flex flex-col bg-gray-200 rounded-lg p-4 m-2 w-full">
+  
+            <div class="h-max bg-gray-400 rounded-lg">
+              <img [src]="libro4.urlImagenPortada" alt="No se encontró portada" class="w-52 h-30" />
+            </div>
+  
+            <div class="flex flex-col items-start mt-4">
+              <h4 class="w-44 truncate text-xl font-semibold">{{libro4.titulo}}</h4>
+              <p class="w-44 truncate text-sm">{{libro4.nombreAutor}}</p>
+              <a class="p-2 leading-none rounded font-medium mt-3 bg-gray-400 text-xs uppercase" [routerLink]="['/biblioteca/libro',libro4.id]">Leer ahora</a>
+            </div>
+  
+          </div>
+  
+        </div>
+        <!-- FIN: LIBRO 4 -->
+  
+        <!-- LIBRO 5 -->
+        <div class="flex flex-row w-96 bg-purple-400 rounded-xl border-4 border-purple-400">
+  
+          <div class="text-12xl">5</div>
+  
+          <div class="flex flex-col bg-gray-200 rounded-lg p-4 m-2 w-full">
+          
+            <div class="h-max bg-gray-400 rounded-lg">
+              <img [src]="libro5.urlImagenPortada" alt="No se encontró portada" class="w-52 h-30" />
+            </div>
+  
+            <div class="flex flex-col items-start mt-4">
+              <h4 class="w-44 truncate text-xl font-semibold">{{libro5.titulo}}</h4>
+              <p class="w-44 truncate text-sm">{{libro5.nombreAutor}}</p>
+              <a class="p-2 leading-none rounded font-medium mt-3 bg-gray-400 text-xs uppercase" [routerLink]="['/biblioteca/libro',libro5.id]">Leer ahora</a>
+            </div>
+  
+          </div>
+  
+        </div>
+        <!-- FIN: LIBRO 5 -->
+  
+        <!-- LIBRO 6-->
+        <div class="flex flex-row w-96 bg-pink-400 rounded-xl border-4 border-pink-400">
+          
+          <div class="text-12xl">6</div>
+  
+          <div class="flex flex-col bg-gray-200 rounded-lg p-4 m-2 w-full">
+            
+            <div class="h-max bg-gray-400 rounded-lg">
+              <img [src]="libro6.urlImagenPortada" alt="No se encontró portada" class="w-52 h-30" />
+            </div>
+            
+            <div class="flex flex-col items-start mt-4">
+              <h4 class="w-44 truncate text-xl font-semibold">{{libro6.titulo}}</h4>
+              <p class="w-44 truncate text-sm">{{libro6.nombreAutor}}</p>
+              <a class="p-2 leading-none rounded font-medium mt-3 bg-gray-400 text-xs uppercase" [routerLink]="['/biblioteca/libro',libro6.id]">Leer ahora</a>
+            </div>
+          
+          </div>
+      
+        </div>
+        <!-- FIN: LIBRO 6-->
+  
+      </div>
+  
+    </div>
+    <!-- FIN: LIBROS DE LA SEMANA -->
+  
+  </div>
+  

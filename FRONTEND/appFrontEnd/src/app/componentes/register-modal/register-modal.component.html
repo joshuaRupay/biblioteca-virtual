@@ -1,0 +1,53 @@
+<!--Inicio landing page Registro -->
+<div class="flex justify-center bg-gray-700">
+  <div class="flex flex-col bg-white h-auto w-100 border-4 border-gray-300 rounded-3xl">
+    <!--Boton de cerrar-->
+    <div class="flex justify-end bg-gray-300 rounded-tr-2xl rounded-tl-2xl">
+      <button class="bg-red-500 h-8 w-8 rounded-full mr-4 mt-1 mb-1">X</button>
+    </div>
+    <!--Fin del boton cerrar-->
+    <h1 class="text-center text-3xl font-bold my-6 cursor-default">Registrate en CRAIFIIS</h1>
+    <!--Inicio del registro de datos-->
+    <div class="flex justify-start my-2 mx-14">
+      <input type="email" name="nombres" placeholder="NOMBRES" class="bg-gray-300 h-12 w-40 py-3 px-2 rounded-lg"
+        [(ngModel)]="nombres" />
+      <input type="email" name="apellidos" placeholder="APELLIDOS"
+        class="bg-gray-300 h-12 w-40 py-3 px-2 mx-6 rounded-lg" [(ngModel)]="apellidos" />
+    </div>
+
+    <div class="flex justify-start my-2 mx-14">
+      <input type="text" name="email" placeholder="EMAIL" class="bg-gray-300 h-12 w-96 py-3 px-2 rounded-lg"
+        [(ngModel)]="email" />
+    </div>
+
+    <div class="flex justify-start my-2 mx-14">
+      <input type="password" name="contrasenia" placeholder="CONTRASEÑA"
+        class="bg-gray-300 h-12 w-56 py-3 px-2 rounded-lg" [(ngModel)]="contrasenia" />
+    </div>
+
+    <div class="flex justify-start my-2 mx-14 cursor-default">
+      <p>Usa 8 o más caracteres con una combinación de letras, números y símbolos</p>
+    </div>
+
+    <div class="flex justify-start my-2 mx-14">
+      <input type="password" name="contraseniaRepeticion" placeholder="CONFIRMAR CONTRASEÑA"
+        class="bg-gray-300 h-12 w-56 py-3 px-2 rounded-lg" [(ngModel)]="contraseniaRepeticion" />
+    </div>
+
+    <div class="flex justify-start my-2.5 mx-14">
+      <input type="checkbox" class="h-4 mx-1" />
+      <p class="font-bold -translate-y-1.5 mx-1 cursor-default">Aceptar</p>
+      <p class="font-bold -translate-y-1.5 cursor-default text-blue-400">términos</p>
+      <p class="font-bold -translate-y-1.5 mx-1 cursor-default">y</p>
+      <p class="font-bold -translate-y-1.5 cursor-default text-blue-400">condiciones</p>
+    </div>
+    <!--Fin de los datos registrados-->
+    <!--Boton de Registro -->
+    <div class="flex justify-center my-2">
+      <button class="bg-gray-300 border-2 border-gray-400 rounded-2xl h-12 w-36 mx-2 text-gray-600 font-bold"
+        (click)="registrar()">REGISTRARSE</button>
+    </div>
+    <!--Fin del boton de registro-->
+  </div>
+</div>
+<!--Fin landing page Registro -->

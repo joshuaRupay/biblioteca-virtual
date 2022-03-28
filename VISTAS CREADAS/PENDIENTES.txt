@@ -1,0 +1,15 @@
+PAGINA---------------------------PENDIENTE
+
+- INICIO                         REGISTRARSE
+- INICIO                         INICIO SESION (FACEBOOK - GOOGLE)
+
+
+- POST-INICIO                    Configuracion
+- POST-INICIO                    Registro de asistencia
+- POST-INICIO                    Cerrar sesion: falta consideraciones
+
+
+- BIBLIOTECA		         Leer el libro desde la página
+
+
+

@@ -1,0 +1,179 @@
+<!-- CAPA PARA DAR OPACIDAD -->
+<div class="absolute {{opacidad}} w-full h-full bg-gray-600"></div>
+<!-- FIN: CAPA PARA DAR OPACIDAD -->
+
+<!-- TARJETA DE INICIAR SESION -->
+<div *ngIf="iniciarseClick == true" class="fixed z-50 w-full flex justify-center opacity-100 mt-10">
+  
+  <div class="flex flex-col bg-white h-auto w-100 border-4 border-gray-300 rounded-3xl">
+    
+    <!-- BOTON DE CERRAR TARJETA -->
+    <div class="flex justify-end bg-gray-300 rounded-tr-2xl rounded-tl-2xl">
+      
+      <button (click)="modalIniciarSesion()" class="bg-red-500 h-8 w-8 rounded-full mr-4 mt-1 mb-1 pl-1">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      
+      </button>
+    
+    </div>
+    <!-- FIN: BOTON DE CERRAR TARJETA -->
+
+    <h1 class="text-center text-3xl font-bold my-6 cursor-default">Iniciar sesión</h1>
+
+    <!-- INPUTS -->
+    <div class="my-8">
+    
+      <div class="flex justify-center my-2">
+        <input type="text" id="correo" [(ngModel)]="email" placeholder="INGRESA UN EMAIL" class="bg-gray-300 h-12 w-80 py-3 px-7 rounded-lg placeholder-black focus-within:placeholder-opacity-40" />
+      </div>
+
+      <div class="flex justify-center my-2">
+        <input type="password" name="credencial" id="credencial" [(ngModel)]="contrasenia" placeholder="CONTRASEÑA" class="bg-gray-300 h-12 w-80 py-3 px-7 rounded-lg placeholder-black focus-within:placeholder-opacity-40" />
+      </div>
+    
+    </div>
+    <!-- FIN: INPUTS -->
+
+    <!-- CHECK BOX -->
+    <div class="flex justify-center my-2.5">
+    
+      <input type="checkbox" class="h-4 mx-1" />
+    
+      <p class="font-bold -translate-y-1.5 mx-1 cursor-default">Mantener sesión iniciada</p>
+    
+    </div>
+    <!-- FIN: CHECK BOX -->
+
+    <!-- BOTONES DE CREAR E INICIAR -->
+    <div class="flex justify-center">
+      <button class="bg-white rounded-3xl h-12 w-36 mx-2 text-gray-600 font-bold">CREAR CUENTA</button>
+    </div>
+
+    <div class="flex justify-center my-2">
+      <a class="bg-gray-300 border-2 border-gray-400 rounded-2xl h-12 w-36 mx-2 text-gray-600 font-bold" routerLink="post-inicio/bienvenida">INICIAR SESIÓN</a>
+    </div>
+    <!-- FIN: BOTONES DE CREAR E INICIAR -->
+
+    <p class="flex justify-center my-6 font-bold underline cursor-pointer">¿NO PUEDES INICIAR SESIÓN?</p>
+
+  </div>
+
+</div>
+<!-- FIN: TARJETA DE INICIAR SESION -->
+
+<!-- TARJETA CREAR CUENTA -->
+<div *ngIf="registrarseClick == true" class="fixed z-50 w-full flex justify-center opacity-100 mt-10">
+
+  <div class="flex flex-col bg-white h-auto w-100 border-4 border-gray-300 rounded-3xl">
+  
+    <!-- BOTON PARA CERRAR PANEL MODAL -->
+    <div class="flex justify-end bg-gray-300 rounded-tr-2xl rounded-tl-2xl">
+  
+      <button (click)="modalRegistrar()" class="bg-red-500 h-8 w-8 rounded-full mr-4 mt-1 mb-1 pl-1">
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+
+      </button>
+  
+    </div>
+    <!--FIN: BOTON PARA CERRAR PANEL MODAL -->
+
+    <h1 class="text-center text-3xl font-bold my-6 cursor-default">Registrate en CRAIFIIS</h1>
+
+    <!-- INPUTS -->
+ 
+    <div class="flex justify-start my-2 mx-14">
+  
+      <input type="text" placeholder="NOMBRES" class="bg-gray-300 h-12 w-40 py-3 px-2 rounded-lg placeholder-black focus-within:placeholder-opacity-40" />
+      <input type="text" placeholder="APELLIDOS" class="bg-gray-300 h-12 w-40 py-3 px-2 mx-6 rounded-lg placeholder-black focus-within:placeholder-opacity-40" />
+  
+    </div>
+
+    <div class="flex justify-start my-2 mx-14">
+      <input type="email" placeholder="EMAIL" class="bg-gray-300 h-12 w-96 py-3 px-2 rounded-lg placeholder-black focus-within:placeholder-opacity-40" />
+    </div>
+
+    <div class="flex justify-start my-2 mx-14">
+      <input type="password" placeholder="CONTRASEÑA" class="bg-gray-300 h-12 w-56 py-3 px-2 rounded-lg placeholder-black focus-within:placeholder-opacity-40" />
+    </div>
+
+    <div class="flex justify-start my-2 mx-14 cursor-default">
+      <p>Usa 8 o más caracteres con una combinación de letras, números y símbolos</p>
+    </div>
+
+    <div class="flex justify-start my-2 mx-14">
+      <input type="password" placeholder="CONFIRMAR CONTRASEÑA" class="bg-gray-300 h-12 w-56 py-3 px-2 rounded-lg placeholder-black focus-within:placeholder-opacity-40" />
+    </div>
+
+    <div class="flex justify-start my-2.5 mx-14">
+  
+      <input type="checkbox" class="h-4 mx-1" />
+      <p class="font-bold -translate-y-1.5 mx-1 cursor-default">Aceptar</p>
+      <p class="font-bold -translate-y-1.5 cursor-default text-blue-400">términos</p>
+      <p class="font-bold -translate-y-1.5 mx-1 cursor-default">y</p>
+      <p class="font-bold -translate-y-1.5 cursor-default text-blue-400">condiciones</p>
+  
+    </div>
+    <!-- FIN: INPUTS -->
+
+    <!-- BOTON REGISTRARSE -->
+    <div class="flex justify-center my-2">
+      <button class="bg-gray-300 border-2 border-gray-400 rounded-2xl h-12 w-36 mx-2 text-gray-600 font-bold">REGISTRARSE</button>
+    </div>
+    <!-- FIN: BOTON REGISTRARSE -->
+
+  </div>
+
+</div>
+<!-- FIN: TARJETA CREAR CUENTA -->
+
+<!-- BARRA PRINCIPAL -->
+<div class="absolute z-20">
+
+  <div class="w-full px-4 py-2 bg-gray-100 flex items-center justify-between fixed">
+  
+    <div class="flex items-center">
+  
+      <div class="inline-flex items-center mr-8">
+        <a href="inicio#seccion-principal" class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">CRAII - FIIS</a>
+      </div>
+
+      <ul class="items-center hidden space-x-8 lg:flex">
+  
+        <li class="group duration-500 h-10 w-24 pt-1.5 pl-4 rounded-md border-2 border-dashed border-red-500 hover:bg-red-500 hover:duration-300">
+          <a href="inicio#seccion-porque" class="font-medium tracking-wide text-red-500 text-center py-1.5 group-hover:text-white">Por qué</a>
+        </li>
+
+        <li class="group duration-500 h-10 w-24 pt-1.5 pl-2.5 rounded-md border-2 border-dashed border-blue-500 hover:bg-blue-500 hover:duration-300">
+          <a href="inicio#seccion-nosotros" class="font-medium tracking-wide text-blue-500 text-center py-1.5 group-hover:text-white">Nosotros</a>
+        </li>
+
+        <li class="group duration-500 h-10 w-24 pt-1.5 pl-5 rounded-md border-2 border-dashed border-green-500 hover:bg-green-500 hover:duration-300">
+          <a href="inicio#seccion-mision" class="font-medium tracking-wide text-green-500 text-center py-1.5 group-hover:text-white">Misión</a>
+        </li>
+  
+      </ul>
+  
+    </div>
+
+    <ul class="group items-center hidden space-x-8 lg:flex">
+  
+      <li class="h-10 w-24 rounded-lg border-2 border-dashed border-gray-700 group-hover:bg-gray-700 group-hover:border-gray-700">
+        <div (click)="modalIniciarSesion()" class="font-medium tracking-wide text-gray-700 text-center py-1.5 group-hover:text-gray-300 cursor-pointer">Iniciar</div>
+      </li>
+
+      <li class="h-10 w-24 bg-gray-700 rounded-lg border-2 border-dashed border-gray-700 group-hover:bg-gray-100 group-hover:border-gray-700">
+        <div (click)="modalRegistrar()" class="font-medium tracking-wide text-gray-300 text-center py-1.5 group-hover:text-gray-700">Crear</div>
+      </li>
+
+    </ul>
+
+  </div>
+
+</div>
+<!-- FIN DE LA BARRA PRINCIPAL -->

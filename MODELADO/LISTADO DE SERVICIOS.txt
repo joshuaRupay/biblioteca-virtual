@@ -1,0 +1,35 @@
+SERVICIOS
+
+
+PAGINA DE INICIO
+1- Registrar usuario                - JOSHUA
+2- Iniciar usuario                  - JOSHUA
+
+
+
+PAGINA POST INICIO
+
+CENTRAL
+3-Traer datos usuario               - JOSHUA
+4-Traer favoritos                   - JOSHUA
+5-Traer guardados                   - JOSHUA
+6-Traer >seccion<                   - BRAYAN
+7-Traer salas programadas           - BRAYAN
+8-Traer salas recientes             - BRAYAN
+9-Traer grupos                      - BRAYAN
+
+BIBLIOTECA
+10-Traer mejor titulos (5PRIMEROS)  - BRAYAN
+11-Traer libros de la semana (6ULT) - HAROLD
+12-Traer categorias-libro           - HAROLD
+13-Traer subcategoria-categorias         - HAROLD
+14-Traer libros-subcategoria            - HAROLD
+15-Traer datos-libro                - HAROLD
+16-Insertar seccion-libro           - ERIK
+
+SALA DE LECTURA
+17-Traer numero-creadas-salas       - ERIK
+18-Tras  numero-activas-salas       - ERIK
+19-Reservar sala                    - ERIK
+20-Traer activas-salas              - ERIK
+

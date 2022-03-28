@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="registra" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input name="nombre" id="nombre" type="text">
+
+        <label for="apellidos">Apellidos:</label>
+        <input name="apellidos" id="apellidos" type="text">
+
+        <label for="edad">Edad:</label>
+        <input name="edad" id="edad" type="password">
+
+        <p>Selecciona los vehiculos que tengas</p>
+        <input name="bic" type="checkbox"> Tengo una bici
+        <input name="aut" type="checkbox"> Tengo un auto
+        <input name="yat" type="checkbox"> Tengo un yate
+
+        <p>¿Jugamos?</p>
+        <select name="juego" >
+            <option value="pi">Piedra</option>
+            <option value="pa">Papel</option>
+            <option value="ti">Tijera</option>
+        </select>
+        <p>Agrega mascota</p>
+        <input type="radio" name="mascota" value="M"> Perro
+        <input type="radio" name="mascota" value="O"> Conejo
+        <button type="submit">Enviar registro</button>
+    </form>
+    
+</body>
+</html>

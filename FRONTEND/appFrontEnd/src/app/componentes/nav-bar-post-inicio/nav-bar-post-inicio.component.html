@@ -1,0 +1,31 @@
+<!-- NAV BAR POST INICIO -->
+<div class="px-4 py-2 lg:px-8 bg-gray-100 flex items-center justify-between h-20 border-2 border-gray-500 fixed inset-x-0 top-0">
+
+  <!-- NOMBRE DE LA APLICACIÓN -->
+  <div class="flex items-center">
+
+    <div class="inline-flex items-center mr-8">
+      <p class="ml-2 text-4xl font-bold tracking-wide text-gray-800 uppercase">CRAII - FIIS</p>
+    </div>
+
+  </div>
+
+  <!-- BOTÓN DE INGRESO A LA BIBLIOTECA -->
+  <div class="flex items-center">
+    <div
+      class="group duration-500 h-auto rounded-md border-2 border-dashed border-red-500 hover:bg-red-500 hover:duration-300">
+      <p class="font-medium text-4xl tracking-wide text-red-500 p-8 text-center py-1.5 group-hover:text-white cursor-pointer" routerLink= "/biblioteca/inicio">BIBLIOTECA CRAII
+      </p>
+    </div>
+  </div>
+  
+  <!-- BOTÓN DE CERRAR SESIÓN -->
+  <ul class="group items-center hidden space-x-8 lg:flex">
+    <li
+      class="h-auto w-auto rounded-lg border-2 border-dashed border-gray-700 group-hover:bg-gray-700 group-hover:border-gray-700">
+      <div class="font-medium p-4 text-4xl tracking-wide text-gray-700 text-center py-1.5 group-hover:text-gray-300 cursor-pointer" routerLink ="/inicio" >CERRAR
+        SESIÓN</div>
+    </li>
+  </ul>
+
+</div>

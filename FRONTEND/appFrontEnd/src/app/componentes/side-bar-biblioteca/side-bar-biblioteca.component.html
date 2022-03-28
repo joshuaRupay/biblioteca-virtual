@@ -1,0 +1,134 @@
+<!-- SIDE BAR BIBLIOTECA-->
+<div class="flex z-50 flex-row fixed bg-gray-100 w-{{ancho}} {{transicion}} top-16 h-full p-2 shadow-2xl">
+
+  <div class="relative w-full flex flex-col h-max">
+
+    <!-- ICONO DE LA BARRA -->
+    <div (click)="cambiarAncho()"
+      class="transform {{rotacion}} h-12 w-12 cursor-pointer mx-auto mt-4 flex items-center hover:text-gray-600 justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="black">
+        <path fill-rule="evenodd"
+          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+          clip-rule="evenodd" />
+      </svg>
+    </div>
+    <!-- FIN: ICONO DE LA BARRA -->
+
+    <!-- SECCIONES DE LA BARRA -->
+    <nav class="mt-6 transform -translate-x-{{traslacion}} {{transicion}}">
+
+      <!-- AQUI EMPIEZA LA BARRITA CON OPCIONES DESPLEGABLES     -->
+      <div>
+
+        <div (click)="desplegarOpciones(0)">
+          <button
+            class="w-full flex justify-between items-center py-3 px-6 text-gray-600 cursor-pointer hover:bg-red-100 hover:text-gray-700 focus:outline-none">
+
+            <span class="flex items-center">
+              <span class="mx-4 font-medium">CIENCIAS</span>
+            </span>
+
+            <span>
+              <svg class="h-4 w-4 transform {{desplegarOpcionesLista[0].rotacion}}" viewBox="0 0 24 24" fill="none">
+                <path x-show="! open" d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" style="display: none;"></path>
+                <path x-show="open" d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <div class="bg-gray-100">
+          <a class="{{desplegarOpcionesLista[0].cero}} px-16 block text-gray-600 hover:bg-blue-500 hover:text-white"
+          [routerLink]="['/biblioteca/libros-por-subcategoria/',1]" (click)="cerrarBarra()">Física</a>
+          <a
+            class="{{desplegarOpcionesLista[0].cero}} px-16 block text-gray-600 hover:bg-blue-500 hover:text-white"
+            [routerLink]="['/biblioteca/libros-por-subcategoria/',2]">Química General</a>
+        </div>
+
+      </div>
+      <!-- AQUI TERMINA LA BARRITA CON OPCIONES DESPLEGABLES     -->
+
+      <!-- AQUI EMPIEZA LA BARRITA CON OPCIONES DESPLEGABLES     -->
+      <div>
+
+        <div (click)="desplegarOpciones(1)">
+          <button
+            class="w-full flex justify-between items-center py-3 px-6 text-gray-600 cursor-pointer hover:bg-red-100 hover:text-gray-700 focus:outline-none">
+            <span class="flex items-center">
+              <span class="mx-4 font-medium">MATEMÁTICAS</span>
+            </span>
+
+            <span>
+              <svg class="h-4 w-4 transform {{desplegarOpcionesLista[1].rotacion}}" viewBox="0 0 24 24" fill="none">
+                <path x-show="! open" d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" style="display: none;"></path>
+                <path x-show="open" d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <div class="bg-gray-100">
+          <a class="{{desplegarOpcionesLista[1].cero}} px-16 block text-gray-600 hover:bg-blue-500 hover:text-white"
+          [routerLink]="['/biblioteca/libros-por-subcategoria/',3]">Álgebra Lineal</a>
+          <a class="{{desplegarOpcionesLista[1].cero}} px-16 block text-gray-600 hover:bg-blue-500 hover:text-white"
+          [routerLink]="['/biblioteca/libros-por-subcategoria/',4]">Cálculo</a>
+        </div>
+
+      </div>
+      <!-- AQUI TERMINA LA BARRITA CON OPCIONES DESPLEGABLES     -->
+
+      <!-- AQUI EMPIEZA LA BARRITA CON OPCIONES DESPLEGABLES     -->
+      <div>
+
+        <div (click)="desplegarOpciones(2)">
+          <button
+            class="w-full flex justify-between items-center py-3 px-6 text-gray-600 cursor-pointer hover:bg-red-100 hover:text-gray-700 focus:outline-none">
+            <span class="flex items-center">
+              <span class="mx-4 font-medium">PROGRAMACION</span>
+            </span>
+
+            <span>
+              <svg class="h-4 w-4 transform {{desplegarOpcionesLista[2].rotacion}}" viewBox="0 0 24 24" fill="none">
+                <path x-show="! open" d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" style="display: none;"></path>
+                <path x-show="open" d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <div class="bg-gray-100">
+          <a
+            class="{{desplegarOpcionesLista[2].cero}} px-16 block text-gray-600 hover:bg-blue-500 hover:text-white"
+            [routerLink]="['/biblioteca/libros-por-subcategoria/',5]">Introducción a la Programación</a>
+          <a
+            class="{{desplegarOpcionesLista[2].cero}} px-16 block text-gray-600 hover:bg-blue-500 hover:text-white"
+            [routerLink]="['/biblioteca/libros-por-subcategoria/',6]">POO</a>
+        </div>
+
+      </div>
+      <!-- AQUI TERMINA LA BARRITA CON OPCIONES DESPLEGABLES     -->
+
+    </nav>
+    <!-- SECCIONES DE LA BARRA -->
+
+    <!-- ICONO DE AYUDA -->
+    <div class="absolute h-10 w-10 mx-auto bottom-16 inset-x-0 mb-4">
+      <a class="flex items-center hover:text-gray-600 justify-center" routerLink="/biblioteca/inicio">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2.5 2v6h6M2.66 15.57a10 10 0 1 0 .57-8.38" />
+        </svg>
+      </a>
+    </div>
+    <!-- FIN: ICONO DE AYUDA -->
+
+  </div>
+
+</div>
+<!-- FIN: SIDE BAR-->

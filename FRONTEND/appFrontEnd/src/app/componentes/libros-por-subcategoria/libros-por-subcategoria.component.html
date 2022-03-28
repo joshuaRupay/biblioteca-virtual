@@ -1,0 +1,61 @@
+ <!--VISTA LIBROS POR SUBCATEGORÍA-->
+<div>
+    <!--Bloque Título bienvenido-->
+    <div class="flex flex-row">
+        <!--Figura rectanculo-->
+        <svg width="30" height="100" viewBox="0 0 30 100">
+            <rect x="10" y="10" width="10" height="50" fill="RoyalBlue" />
+        </svg>
+        <!--Finaliza la figura-->
+        <div class="text-6xl text-green-600 font-semibold">BIENVENIDO :))</div>
+    </div>
+    <!-- Bloque segundo título-->
+    <div class="flex flex-row mt-4">
+        <div>
+            <svg width="30" height="100" viewBox="0 0 30 100">
+                <rect x="10" y="5" width="10" height="30" fill="RoyalBlue" />
+            </svg>
+        </div>
+        <div class="font-bold text-3xl uppercase">Estas son nuestras opciones</div>
+    </div>
+    <!--Finzaliza segundo bloque-->
+    <div class="grid 2xl:grid-cols-3 xl:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12 w-full mt-6">
+        <!-- EMPIEZA LIBRO-->
+        <div *ngFor="let libro of listaLibros" class="flex flex-col bg-gray-200 rounded-lg p-4 m-2 w-80">
+            <div class="h-max bg-gray-400 rounded-lg w-full">
+                <img [src]="libro.urlImagenPortada" alt="No se encontró portada" class="w-full h-30" />
+            </div>
+            <div class="flex flex-col items-start mt-4">
+                <h4 class="text-xl font-semibold">{{libro.titulo}}</h4>
+                <p class="text-sm">{{libro.nombreAutor}}</p>
+                <a class="p-2 leading-none rounded font-medium mt-3 bg-gray-400 text-xs uppercase"
+                    [routerLink]="['/biblioteca/libro',libro.id]">Leer ahora</a>
+            </div>
+        </div>
+        <!-- TERMINA LIBRO -->
+    </div>
+    <!-- 5 Botones y sus estilos-->
+    <div class="flex justify-center mt-10 space-x-1">
+        <!-- Boton con svg de la flecha anterior-->
+        <button class="flex items-center justify-center h-8 w-8 rounded text-gray-400">
+            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path
+                    d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" />
+            </svg>
+        </button>
+        <button class="flex items-center justify-center h-8 px-2 rounded text-sm text-gray-400" disabled>Prev</button>
+        <button class="flex items-center justify-center h-8 w-8 rounded bg-indigo-200 text-sm text-indigo-600"
+            disabled>1</button>
+        <button class="flex items-center justify-center h-8 w-8 rounded bg-indigo-200 text-sm text-indigo-600"
+            disabled>2</button>
+        <!--Boton con svg de la flechas siguiente-->
+        <button
+            class="flex items-center justify-center h-8 w-8 rounded hover:bg-indigo-200 text-gray-600 hover:text-indigo-600">
+            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
+            </svg>
+        </button>
+    </div>
+    <!--Finaliza bloque de estilos-->
+</div>

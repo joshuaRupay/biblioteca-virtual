@@ -1,0 +1,45 @@
+<!-- SECCIONES DE LIBROS INICIO -->
+<div class="flex flex-col h-full border-8 border-indigo-500 ">
+    <!-- SECCION MIS FAVORITOS INICIO -->
+    <div
+        class="flex-col border-8 border-pink-900  m-4 bg-yellow-50 bg-gradient-to-r from-gray-800 via-red-800 to-yellow-500">
+        <p class=" text-5xl text-yellow-500 font-semibold m-10">SECCION MIS FAVORITOS</p>
+        <!-- COMPONENTE LIBROS FAVORITOS INICIO -->
+        <div class="grid grid-cols-4 gap-2 max-w-max px-10 pb-10">
+            <div *ngFor="let libro of listaFavoritos" class="flex flex-col bg-gray-200 rounded-lg p-4 m-2 ">
+                <div class="h-max bg-gray-400 rounded-lg w-full">
+                    <img [src]="libro.urlImagenPortada" alt="No se encontró portada" class="w-full h-30">
+                </div>
+                <div class="flex flex-col items-start mt-4">
+                    <h4 class="text-xl font-semibold">{{libro.titulo}}</h4>
+                    <p class="text-sm">{{libro.nombreAutor}}</p>
+                    <a class="p-2 leading-none rounded font-medium mt-3 bg-gray-400 text-xs uppercase" [routerLink]="['/biblioteca/libro',libro.id]">Leer
+                        ahora</a>
+                </div>
+            </div>
+        </div>
+        <!-- COMPONENTE LIBROS FAVORITOS FIN  -->
+    </div>
+    <!-- SECCION MIS FAVORITOS FIN -->
+    <!-- SECCION MIS GUARDADOS INICIO -->
+    <div class="flex-col border-8 border-pink-900 m-4 bg-gradient-to-r from-gray-900 via-indigo-800 to-cyan-300">
+        <p class=" text-5xl text-blue-600 font-semibold m-10 ">SECCION MIS GUARDADOS</p>
+        <!-- COMPONENTE LIBROS GUARDADOS INICIO -->
+        <div class="grid grid-cols-4 gap-2 max-w-max px-10 pb-10">
+            <div *ngFor="let libro of listaGuardados" class="flex flex-col bg-gray-200 rounded-lg p-4 m-2 ">
+                <div class="h-max bg-gray-400 rounded-lg w-full">
+                    <img [src]="libro.urlImagenPortada" alt="No se encontró portada" class="w-full h-30">
+                </div>
+                <div class="flex flex-col items-start mt-4">
+                    <h4 class="text-xl font-semibold">{{libro.titulo}}</h4>
+                    <p class="text-sm">{{libro.nombreAutor}}</p>
+                    <a class="p-2 leading-none rounded font-medium mt-3 bg-gray-400 text-xs uppercase" [routerLink]="['/biblioteca/libro',libro.id]">Leer
+                        ahora</a>
+                </div>
+            </div>
+        </div>
+        <!-- COMPONENTE LIBROS GUARDADOS FIN  -->
+    </div>
+    <!-- SECCION MIS GUARDADOS FIN -->
+</div>
+<!-- SECCIONES DE LIBROS FIN -->

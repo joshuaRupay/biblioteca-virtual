@@ -1,0 +1,1 @@
+Se eliminó la carpeta PDF de los 27 libros para comprimir todo en un zip

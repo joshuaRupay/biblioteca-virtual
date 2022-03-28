@@ -1,0 +1,22 @@
+CREATE DATABASE proyecto_poo;
+
+USE proyecto_poo;
+
+CREATE TABLE libro(
+	id_libro VARCHAR(50) PRIMARY key,
+	titulo VARCHAR(50),
+	autor VARCHAR(50),
+	descripcion VARCHAR(200),
+	fecha_publicacion DATE
+);
+
+CREATE TABLE pedido(
+	codigo_usuario VARCHAR(10),
+	id_pedido VARCHAR(10) PRIMARY key,
+	id_libro VARCHAR(10)
+);
+
+ALTER TABLE pedido ADD FOREIGN KEY (id_libro) 
+REFERENCES libro(id_libro);
+
+
